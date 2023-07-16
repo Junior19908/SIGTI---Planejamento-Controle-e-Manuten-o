@@ -46,7 +46,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Planejamento = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -193,7 +193,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.OS);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.Planejamento);
             this.tabControl1.Location = new System.Drawing.Point(13, 150);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -335,15 +335,15 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Equipamento:";
             // 
-            // tabPage2
+            // Planejamento
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(996, 472);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.Planejamento.Location = new System.Drawing.Point(4, 22);
+            this.Planejamento.Name = "Planejamento";
+            this.Planejamento.Padding = new System.Windows.Forms.Padding(3);
+            this.Planejamento.Size = new System.Drawing.Size(996, 502);
+            this.Planejamento.TabIndex = 1;
+            this.Planejamento.Text = "Planejamento";
+            this.Planejamento.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -439,6 +439,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F);
             this.radioButton1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.radioButton1.Location = new System.Drawing.Point(435, 43);
@@ -458,7 +459,6 @@
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(76, 18);
             this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "&Planejável";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
@@ -816,7 +816,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage Planejamento;
         private System.Windows.Forms.TextBox txtGeoMaps;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
