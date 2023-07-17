@@ -116,6 +116,20 @@
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DescServPlanejado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DurPrev = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DurCal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NPR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OficinaN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeFuncionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataFunc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HrInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HrFim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NrServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SituacaoFunc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.OS.SuspendLayout();
@@ -338,9 +352,9 @@
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Microsoft Tai Le", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button4.Location = new System.Drawing.Point(740, 468);
+            this.button4.Location = new System.Drawing.Point(736, 428);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 28);
+            this.button4.Size = new System.Drawing.Size(104, 68);
             this.button4.TabIndex = 55;
             this.button4.Text = "&Imprimir OS";
             this.button4.UseVisualStyleBackColor = true;
@@ -350,9 +364,9 @@
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button3.Location = new System.Drawing.Point(610, 468);
+            this.button3.Location = new System.Drawing.Point(610, 428);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.Size = new System.Drawing.Size(104, 68);
             this.button3.TabIndex = 8;
             this.button3.Text = "&Cadastrar OS";
             this.button3.UseVisualStyleBackColor = true;
@@ -1027,6 +1041,14 @@
             // dataGridView5
             // 
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Matricula,
+            this.NomeFuncionario,
+            this.DataFunc,
+            this.HrInicio,
+            this.HrFim,
+            this.NrServico,
+            this.SituacaoFunc});
             this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView5.Location = new System.Drawing.Point(3, 17);
             this.dataGridView5.Name = "dataGridView5";
@@ -1049,11 +1071,91 @@
             // dataGridView4
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.DescServPlanejado,
+            this.DurPrev,
+            this.DurCal,
+            this.NPR,
+            this.OficinaN,
+            this.Situacao});
             this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView4.Location = new System.Drawing.Point(3, 17);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.Size = new System.Drawing.Size(990, 230);
             this.dataGridView4.TabIndex = 0;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // DescServPlanejado
+            // 
+            this.DescServPlanejado.HeaderText = "Descrição do Serviço Planejado";
+            this.DescServPlanejado.Name = "DescServPlanejado";
+            this.DescServPlanejado.Width = 250;
+            // 
+            // DurPrev
+            // 
+            this.DurPrev.HeaderText = "Dur.Prev.";
+            this.DurPrev.Name = "DurPrev";
+            // 
+            // DurCal
+            // 
+            this.DurCal.HeaderText = "Dur. Cal.";
+            this.DurCal.Name = "DurCal";
+            // 
+            // NPR
+            // 
+            this.NPR.HeaderText = "N.P.";
+            this.NPR.Name = "NPR";
+            // 
+            // OficinaN
+            // 
+            this.OficinaN.HeaderText = "Oficina";
+            this.OficinaN.Name = "OficinaN";
+            // 
+            // Situacao
+            // 
+            this.Situacao.HeaderText = "Situação";
+            this.Situacao.Name = "Situacao";
+            // 
+            // Matricula
+            // 
+            this.Matricula.HeaderText = "Matricula";
+            this.Matricula.Name = "Matricula";
+            // 
+            // NomeFuncionario
+            // 
+            this.NomeFuncionario.HeaderText = "Nome do Funcionário";
+            this.NomeFuncionario.Name = "NomeFuncionario";
+            this.NomeFuncionario.Width = 250;
+            // 
+            // DataFunc
+            // 
+            this.DataFunc.HeaderText = "Data";
+            this.DataFunc.Name = "DataFunc";
+            // 
+            // HrInicio
+            // 
+            this.HrInicio.HeaderText = "Hr. Inicio";
+            this.HrInicio.Name = "HrInicio";
+            // 
+            // HrFim
+            // 
+            this.HrFim.HeaderText = "Hr. Fim";
+            this.HrFim.Name = "HrFim";
+            // 
+            // NrServico
+            // 
+            this.NrServico.HeaderText = "Nr° Serviço";
+            this.NrServico.Name = "NrServico";
+            // 
+            // SituacaoFunc
+            // 
+            this.SituacaoFunc.HeaderText = "Situação";
+            this.SituacaoFunc.Name = "SituacaoFunc";
             // 
             // frmOS
             // 
@@ -1063,7 +1165,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmOS";
-            this.Text = "s";
+            this.Text = "SIGTI - Abertura de OS";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -1176,5 +1278,19 @@
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DescServPlanejado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DurPrev;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DurCal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NPR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OficinaN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Situacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NomeFuncionario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataFunc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HrInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HrFim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NrServico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SituacaoFunc;
     }
 }
