@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastros\CadEquipamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastros\CadEquipamento.Designer.cs">
+      <DependentUpon>CadEquipamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cadastros\CadFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cadastros\CadEquipamento.resx">
+      <DependentUpon>CadEquipamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\CadFuncionario.resx">
       <DependentUpon>CadFuncionario.cs</DependentUpon>
     </EmbeddedResource>

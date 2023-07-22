@@ -10,23 +10,21 @@ using System.Windows.Forms;
 
 namespace SIGTI___PCM.Cadastros
 {
-    public partial class CadFuncionario : MetroFramework.Forms.MetroForm
+    public partial class CadEquipamento : MetroFramework.Forms.MetroForm
     {
-        public CadFuncionario()
+        public CadEquipamento()
         {
             InitializeComponent();
         }
 
-        private void CadFuncionario_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnVoltarMenu_Click(object sender, EventArgs e)
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
-            Form1 menu = new Form1();
-            menu.Show();
-            this.Visible = false;
+
         }
     }
 }

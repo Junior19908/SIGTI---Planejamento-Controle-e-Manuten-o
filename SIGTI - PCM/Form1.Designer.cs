@@ -37,6 +37,23 @@
             this.btnOS = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.equipamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seçãoDeEquipesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.centroDeCustoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeAtividadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.defeitoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modalidadeDoDefeitoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.causaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.localizaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoEquipamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel8
@@ -113,11 +130,132 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(196, 232);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(20, 590);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1024, 22);
+            this.statusStrip1.TabIndex = 8;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(20, 60);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1024, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastroToolStripMenuItem,
+            this.equipamentosToolStripMenuItem,
+            this.centroDeCustoToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(71, 20);
+            this.toolStripMenuItem1.Text = "Cadastros";
+            // 
+            // cadastroToolStripMenuItem
+            // 
+            this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoFuncionárioToolStripMenuItem,
+            this.funçõesToolStripMenuItem,
+            this.seçãoDeEquipesToolStripMenuItem});
+            this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastroToolStripMenuItem.Text = "Funcionários";
+            // 
+            // equipamentosToolStripMenuItem
+            // 
+            this.equipamentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoEquipamentoToolStripMenuItem,
+            this.tipoDeAtividadeToolStripMenuItem,
+            this.defeitoToolStripMenuItem,
+            this.modalidadeDoDefeitoToolStripMenuItem,
+            this.causaToolStripMenuItem,
+            this.localizaçãoToolStripMenuItem,
+            this.funçãoToolStripMenuItem});
+            this.equipamentosToolStripMenuItem.Name = "equipamentosToolStripMenuItem";
+            this.equipamentosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.equipamentosToolStripMenuItem.Text = "Equipamentos";
+            // 
+            // funçõesToolStripMenuItem
+            // 
+            this.funçõesToolStripMenuItem.Name = "funçõesToolStripMenuItem";
+            this.funçõesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.funçõesToolStripMenuItem.Text = "Funções";
+            // 
+            // seçãoDeEquipesToolStripMenuItem
+            // 
+            this.seçãoDeEquipesToolStripMenuItem.Name = "seçãoDeEquipesToolStripMenuItem";
+            this.seçãoDeEquipesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.seçãoDeEquipesToolStripMenuItem.Text = "Seção de Equipes";
+            // 
+            // centroDeCustoToolStripMenuItem
+            // 
+            this.centroDeCustoToolStripMenuItem.Name = "centroDeCustoToolStripMenuItem";
+            this.centroDeCustoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.centroDeCustoToolStripMenuItem.Text = "Centro de Custo";
+            // 
+            // tipoDeAtividadeToolStripMenuItem
+            // 
+            this.tipoDeAtividadeToolStripMenuItem.Name = "tipoDeAtividadeToolStripMenuItem";
+            this.tipoDeAtividadeToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.tipoDeAtividadeToolStripMenuItem.Text = "Tipo de Atividade";
+            // 
+            // defeitoToolStripMenuItem
+            // 
+            this.defeitoToolStripMenuItem.Name = "defeitoToolStripMenuItem";
+            this.defeitoToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.defeitoToolStripMenuItem.Text = "Defeito";
+            // 
+            // modalidadeDoDefeitoToolStripMenuItem
+            // 
+            this.modalidadeDoDefeitoToolStripMenuItem.Name = "modalidadeDoDefeitoToolStripMenuItem";
+            this.modalidadeDoDefeitoToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.modalidadeDoDefeitoToolStripMenuItem.Text = "Modalidade do Defeito";
+            // 
+            // causaToolStripMenuItem
+            // 
+            this.causaToolStripMenuItem.Name = "causaToolStripMenuItem";
+            this.causaToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.causaToolStripMenuItem.Text = "Causa";
+            // 
+            // localizaçãoToolStripMenuItem
+            // 
+            this.localizaçãoToolStripMenuItem.Name = "localizaçãoToolStripMenuItem";
+            this.localizaçãoToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.localizaçãoToolStripMenuItem.Text = "Localização";
+            // 
+            // funçãoToolStripMenuItem
+            // 
+            this.funçãoToolStripMenuItem.Name = "funçãoToolStripMenuItem";
+            this.funçãoToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.funçãoToolStripMenuItem.Text = "Função";
+            // 
+            // novoEquipamentoToolStripMenuItem
+            // 
+            this.novoEquipamentoToolStripMenuItem.Name = "novoEquipamentoToolStripMenuItem";
+            this.novoEquipamentoToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.novoEquipamentoToolStripMenuItem.Text = "Novo Equipamento";
+            // 
+            // novoFuncionárioToolStripMenuItem
+            // 
+            this.novoFuncionárioToolStripMenuItem.Name = "novoFuncionárioToolStripMenuItem";
+            this.novoFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novoFuncionárioToolStripMenuItem.Text = "Novo Funcionário";
+            this.novoFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.novoFuncionárioToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 632);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.flowLayoutPanel8);
             this.Controls.Add(this.flowLayoutPanel7);
             this.Controls.Add(this.flowLayoutPanel6);
@@ -127,11 +265,15 @@
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "SIGTI - Planejamento Controle e Manutenção";
             this.Theme = MetroFramework.MetroThemeStyle.Light;
             this.TransparencyKey = System.Drawing.Color.Lavender;
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -145,6 +287,22 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem equipamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem funçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem seçãoDeEquipesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDeAtividadeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem defeitoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem centroDeCustoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem novoFuncionárioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem novoEquipamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modalidadeDoDefeitoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem causaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem localizaçãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem funçãoToolStripMenuItem;
     }
 }
 

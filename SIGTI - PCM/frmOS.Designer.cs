@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOS));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
             this.rbPlanejavel = new System.Windows.Forms.RadioButton();
@@ -114,6 +115,13 @@
             this.MãoObra = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NomeFuncionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataFunc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HrInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HrFim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NrServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SituacaoFunc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -123,13 +131,6 @@
             this.NPR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OficinaN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NomeFuncionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataFunc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HrInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HrFim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NrServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SituacaoFunc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.OS.SuspendLayout();
@@ -1055,6 +1056,42 @@
             this.dataGridView5.Size = new System.Drawing.Size(990, 230);
             this.dataGridView5.TabIndex = 1;
             // 
+            // Matricula
+            // 
+            this.Matricula.HeaderText = "Matricula";
+            this.Matricula.Name = "Matricula";
+            // 
+            // NomeFuncionario
+            // 
+            this.NomeFuncionario.HeaderText = "Nome do Funcionário";
+            this.NomeFuncionario.Name = "NomeFuncionario";
+            this.NomeFuncionario.Width = 250;
+            // 
+            // DataFunc
+            // 
+            this.DataFunc.HeaderText = "Data";
+            this.DataFunc.Name = "DataFunc";
+            // 
+            // HrInicio
+            // 
+            this.HrInicio.HeaderText = "Hr. Inicio";
+            this.HrInicio.Name = "HrInicio";
+            // 
+            // HrFim
+            // 
+            this.HrFim.HeaderText = "Hr. Fim";
+            this.HrFim.Name = "HrFim";
+            // 
+            // NrServico
+            // 
+            this.NrServico.HeaderText = "Nr° Serviço";
+            this.NrServico.Name = "NrServico";
+            // 
+            // SituacaoFunc
+            // 
+            this.SituacaoFunc.HeaderText = "Situação";
+            this.SituacaoFunc.Name = "SituacaoFunc";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView4);
@@ -1121,42 +1158,6 @@
             this.Situacao.HeaderText = "Situação";
             this.Situacao.Name = "Situacao";
             // 
-            // Matricula
-            // 
-            this.Matricula.HeaderText = "Matricula";
-            this.Matricula.Name = "Matricula";
-            // 
-            // NomeFuncionario
-            // 
-            this.NomeFuncionario.HeaderText = "Nome do Funcionário";
-            this.NomeFuncionario.Name = "NomeFuncionario";
-            this.NomeFuncionario.Width = 250;
-            // 
-            // DataFunc
-            // 
-            this.DataFunc.HeaderText = "Data";
-            this.DataFunc.Name = "DataFunc";
-            // 
-            // HrInicio
-            // 
-            this.HrInicio.HeaderText = "Hr. Inicio";
-            this.HrInicio.Name = "HrInicio";
-            // 
-            // HrFim
-            // 
-            this.HrFim.HeaderText = "Hr. Fim";
-            this.HrFim.Name = "HrFim";
-            // 
-            // NrServico
-            // 
-            this.NrServico.HeaderText = "Nr° Serviço";
-            this.NrServico.Name = "NrServico";
-            // 
-            // SituacaoFunc
-            // 
-            this.SituacaoFunc.HeaderText = "Situação";
-            this.SituacaoFunc.Name = "SituacaoFunc";
-            // 
             // frmOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1164,6 +1165,7 @@
             this.ClientSize = new System.Drawing.Size(1028, 701);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmOS";
             this.Text = "SIGTI - Abertura de OS";
             this.groupBox1.ResumeLayout(false);

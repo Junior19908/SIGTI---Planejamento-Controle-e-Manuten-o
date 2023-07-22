@@ -28,5 +28,12 @@ namespace SIGTI___PCM
         {
 
         }
+
+        private void novoFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cadastros.CadFuncionario funcionario = new Cadastros.CadFuncionario();
+            funcionario.Show();
+            this.Visible = false;
+        }
     }
 }
