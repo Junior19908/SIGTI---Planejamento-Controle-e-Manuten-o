@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIGTI___PCM.Cadastros
+namespace SIGT___PCM.Cadastros
 {
     public partial class CadFuncionario : MetroFramework.Forms.MetroForm
     {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIGTI___PCM.Cadastros
+namespace SIGT___PCM.Cadastros
 {
     public partial class CadEquipamento : MetroFramework.Forms.MetroForm
     {
@@ -23,6 +23,11 @@ namespace SIGTI___PCM.Cadastros
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGravarEquipamento_Click(object sender, EventArgs e)
         {
 
         }

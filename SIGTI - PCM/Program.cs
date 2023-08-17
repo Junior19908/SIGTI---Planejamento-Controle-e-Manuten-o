@@ -1,10 +1,11 @@
-﻿using System;
+﻿using MetroFramework.Components;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIGTI___PCM
+namespace SIGT___PCM
 {
     internal static class Program
     {

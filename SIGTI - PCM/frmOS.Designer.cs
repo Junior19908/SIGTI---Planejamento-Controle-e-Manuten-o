@@ -1,4 +1,4 @@
-﻿namespace SIGTI___PCM
+﻿namespace SIGT___PCM
 {
     partial class frmOS
     {
@@ -42,7 +42,7 @@
             this.txtMesAno = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.OS = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnImpressaoOS = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -295,7 +295,7 @@
             // 
             // OS
             // 
-            this.OS.Controls.Add(this.button4);
+            this.OS.Controls.Add(this.btnImpressaoOS);
             this.OS.Controls.Add(this.button3);
             this.OS.Controls.Add(this.textBox19);
             this.OS.Controls.Add(this.label21);
@@ -348,17 +348,18 @@
             this.OS.Text = "OS.";
             this.OS.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnImpressaoOS
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Font = new System.Drawing.Font("Microsoft Tai Le", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button4.Location = new System.Drawing.Point(736, 428);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 68);
-            this.button4.TabIndex = 55;
-            this.button4.Text = "&Imprimir OS";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnImpressaoOS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImpressaoOS.Font = new System.Drawing.Font("Microsoft Tai Le", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImpressaoOS.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnImpressaoOS.Location = new System.Drawing.Point(736, 428);
+            this.btnImpressaoOS.Name = "btnImpressaoOS";
+            this.btnImpressaoOS.Size = new System.Drawing.Size(104, 68);
+            this.btnImpressaoOS.TabIndex = 55;
+            this.btnImpressaoOS.Text = "&Imprimir OS";
+            this.btnImpressaoOS.UseVisualStyleBackColor = true;
+            this.btnImpressaoOS.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -1167,7 +1168,8 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmOS";
-            this.Text = "SIGTI - Abertura de OS";
+            this.Style = MetroFramework.MetroColorStyle.Purple;
+            this.Text = "SIGT - Abertura de OS";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -1253,7 +1255,7 @@
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnImpressaoOS;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Número;

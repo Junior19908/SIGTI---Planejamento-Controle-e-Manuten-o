@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SIGTI___PCM.Properties {
+namespace SIGT___PCM.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace SIGTI___PCM.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIGTI___PCM.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SIGT___PCM.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -117,6 +117,16 @@ namespace SIGTI___PCM.Properties {
             get {
                 object obj = ResourceManager.GetObject("pasta-de-arquivo-documento-papel-ui-icone-sinal-ou-simbolo-renderizacao-em-3d-rem" +
                         "ovebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SIGT_LOGO_OFC {
+            get {
+                object obj = ResourceManager.GetObject("SIGT_LOGO_OFC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

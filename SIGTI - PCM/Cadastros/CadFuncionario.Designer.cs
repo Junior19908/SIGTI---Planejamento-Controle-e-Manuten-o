@@ -1,4 +1,4 @@
-﻿namespace SIGTI___PCM.Cadastros
+﻿namespace SIGT___PCM.Cadastros
 {
     partial class CadFuncionario
     {
@@ -567,6 +567,7 @@
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadFuncionario";
+            this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "SIGTI - Cadastro de Funcionarios";
             this.Load += new System.EventHandler(this.CadFuncionario_Load);
             this.tabControl1.ResumeLayout(false);

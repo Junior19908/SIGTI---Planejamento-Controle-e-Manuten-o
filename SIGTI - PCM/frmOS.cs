@@ -8,9 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Http;
-using System.Threading.Tasks;
+using SIGT___PCM.Relatorio;
+using MetroFramework.Components;
 
-namespace SIGTI___PCM
+namespace SIGT___PCM
 {
     public partial class frmOS : MetroFramework.Forms.MetroForm
     {
@@ -19,7 +20,10 @@ namespace SIGTI___PCM
             InitializeComponent();
         }
 
-
-
+        private void button4_Click(object sender, EventArgs e)
+        {
+            relatorioOS relatorioOS = new relatorioOS();
+            relatorioOS.GerarRelatorioPDF();
+        }
     }
 }
