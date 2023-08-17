@@ -1,4 +1,5 @@
 ﻿using MetroFramework.Components;
+using SIGT___PCM.Login;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,14 @@ namespace SIGT___PCM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.ShowDialog();
+
+            if (frmLogin.FMP == true)
+            {
+                Application.Run(new Form1());
+            }
         }
     }
 }
