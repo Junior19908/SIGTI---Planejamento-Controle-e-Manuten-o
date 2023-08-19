@@ -1,1 +1,1 @@
-# SIGTI - Planejamento Controle e Manutenção
+# SIGT - Planejamento Controle e Manutenção
