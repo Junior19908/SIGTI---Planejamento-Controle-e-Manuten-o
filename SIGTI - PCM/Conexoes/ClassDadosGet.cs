@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MetroFramework;
+using MetroFramework.Components;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +16,7 @@ namespace SIGT___PCM.Conexoes
         static public Int32 Nivel { get; set; }
         static public Int32 Status { get; set; }
         static public string Tema { get; set; }
+        static public MetroColorStyle TemaUser { get; set; }
         static public string codFamilia { get; set; }
     }
 }

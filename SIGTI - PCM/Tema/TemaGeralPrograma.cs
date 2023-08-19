@@ -2,6 +2,7 @@
 using MetroFramework.Components;
 using SIGT___PCM.Conexoes;
 using System;
+using System.Data.OleDb;
 
 namespace SIGT___PCM.Tema
 {
@@ -9,6 +10,11 @@ namespace SIGT___PCM.Tema
     {
         public static void SetPurpleStyle(MetroStyleManager styleManager)
         {
+            styleManager.Style = ClassDadosGet.TemaUser;
+            if (styleManager.)
+            {
+                
+            }
             if (styleManager.Style == MetroFramework.MetroColorStyle.Default)
             {
                 ClassDadosGet.Tema = "Default";

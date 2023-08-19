@@ -21,7 +21,7 @@ namespace SIGT___PCM.Cadastros
         public CadEquipamento()
         {
             InitializeComponent();
-            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerCadastroEquipamentos);
+            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerCadastroEquipamentos, ClassDadosGet.TemaUser);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -154,160 +154,103 @@ namespace SIGT___PCM.Cadastros
                 txtFichaEquipamento.Text = openFileDialog.FileName;
             }
         }
+        string novoCodigo;
         //private CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos();
         private void cmbTipoEquipamento_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("BC - ");
             if (cmbTipoEquipamento.SelectedIndex == 0)
             {
-                string novoCodigo = codFamiliaEquipamentoManager.GerarNovo("BC - ");
-                while (codFamiliaEquipamentoManager.EDuplicado(novoCodigo))
-                {
-                    novoCodigo = codFamiliaEquipamentoManager.GerarNovo("BC - ");
-                }
+                CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("BC - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("BC - ");
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }
             else if(cmbTipoEquipamento.SelectedIndex == 1)
             {
-                codFamiliaEquipamentoManager = new CodigoEquipamentos("BH - ");
-                string novoCodigo = codFamiliaEquipamentoManager.GerarNovo("BH - ");
-                while (codFamiliaEquipamentoManager.EDuplicado(novoCodigo))
-                {
-                    novoCodigo = codFamiliaEquipamentoManager.GerarNovo("BH - ");
-                }
+                CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("BH - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("BH - ");
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }
             else if (cmbTipoEquipamento.SelectedIndex == 2)
             {
-                codFamiliaEquipamentoManager = new CodigoEquipamentos("BB - ");
-                string novoCodigo = codFamiliaEquipamentoManager.GerarNovo("BB - ");
-                while (codFamiliaEquipamentoManager.EDuplicado(novoCodigo))
-                {
-                    novoCodigo = codFamiliaEquipamentoManager.GerarNovo("BB - ");
-                }
+                CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("BB - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("BB - ");
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }
             else if (cmbTipoEquipamento.SelectedIndex == 3)
             {
-                codFamiliaEquipamentoManager = new CodigoEquipamentos("BV - ");
-                string novoCodigo = codFamiliaEquipamentoManager.GerarNovo("BV - ");
-                while (codFamiliaEquipamentoManager.EDuplicado(novoCodigo))
-                {
-                    novoCodigo = codFamiliaEquipamentoManager.GerarNovo("BV - ");
-                }
+                CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("BV - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("BV - ");
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }
             else if (cmbTipoEquipamento.SelectedIndex == 4)
             {
-                codFamiliaEquipamentoManager = new CodigoEquipamentos("CA - ");
-                string novoCodigo = codFamiliaEquipamentoManager.GerarNovo("CA - ");
-                while (codFamiliaEquipamentoManager.EDuplicado(novoCodigo))
-                {
-                    novoCodigo = codFamiliaEquipamentoManager.GerarNovo("CA - ");
-                }
+                CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("CA - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("CA - ");
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }
             else if (cmbTipoEquipamento.SelectedIndex == 5)
             {
-                codFamiliaEquipamentoManager = new CodigoEquipamentos("CP - ");
-                string novoCodigo = codFamiliaEquipamentoManager.GerarNovo("CP - ");
-                while (codFamiliaEquipamentoManager.EDuplicado(novoCodigo))
-                {
-                    novoCodigo = codFamiliaEquipamentoManager.GerarNovo("CP - ");
-                }
+                CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("CP - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("CP - ");
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }
             else if (cmbTipoEquipamento.SelectedIndex == 6)
             {
-                codFamiliaEquipamentoManager = new CodigoEquipamentos("EC - ");
-                string novoCodigo = codFamiliaEquipamentoManager.GerarNovo("EC - ");
-                while (codFamiliaEquipamentoManager.EDuplicado(novoCodigo))
-                {
-                    novoCodigo = codFamiliaEquipamentoManager.GerarNovo("EC - ");
-                }
+                CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("EC - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("EC - ");
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }
             else if (cmbTipoEquipamento.SelectedIndex == 7)
             {
-                codFamiliaEquipamentoManager = new CodigoEquipamentos("ES - ");
-                string novoCodigo = codFamiliaEquipamentoManager.GerarNovo("ES - ");
-                while (codFamiliaEquipamentoManager.EDuplicado(novoCodigo))
-                {
-                    novoCodigo = codFamiliaEquipamentoManager.GerarNovo("ES - ");
-                }
+                CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("ES - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("ES - ");
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }
             else if (cmbTipoEquipamento.SelectedIndex == 8)
             {
-                codFamiliaEquipamentoManager = new CodigoEquipamentos("EX - ");
-                string novoCodigo = codFamiliaEquipamentoManager.GerarNovo("EX - ");
-                while (codFamiliaEquipamentoManager.EDuplicado(novoCodigo))
-                {
-                    novoCodigo = codFamiliaEquipamentoManager.GerarNovo("EX - ");
-                }
+                CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("EX - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("EX - ");
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }
             else if (cmbTipoEquipamento.SelectedIndex == 9)
-            {
-                codFamiliaEquipamentoManager = new CodigoEquipamentos("ME - ");
-                string novoCodigo = codFamiliaEquipamentoManager.GerarNovo("ME - ");
-                while (codFamiliaEquipamentoManager.EDuplicado(novoCodigo))
-                {
-                    novoCodigo = codFamiliaEquipamentoManager.GerarNovo("ME - ");
-                }
+            {CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("ME - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("ME - ");
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }
             else if (cmbTipoEquipamento.SelectedIndex == 10)
             {
-                codFamiliaEquipamentoManager = new CodigoEquipamentos("PV - ");
-                string novoCodigo = codFamiliaEquipamentoManager.GerarNovo("PV - ");
-                while (codFamiliaEquipamentoManager.EDuplicado(novoCodigo))
-                {
-                    novoCodigo = codFamiliaEquipamentoManager.GerarNovo("PV - ");
-                }
+                CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("PV - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("PV - ");
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }
             else if (cmbTipoEquipamento.SelectedIndex == 11)
-            {
-                codFamiliaEquipamentoManager = new CodigoEquipamentos("PL - ");
-                string novoCodigo = codFamiliaEquipamentoManager.GerarNovo("PL - ");
-                while (codFamiliaEquipamentoManager.EDuplicado(novoCodigo))
-                {
-                    novoCodigo = codFamiliaEquipamentoManager.GerarNovo("PL - ");
-                }
+            {CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("PL - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("PL - ");
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }
             else if (cmbTipoEquipamento.SelectedIndex == 12)
             {
-                codFamiliaEquipamentoManager = new CodigoEquipamentos("TH - ");
-                string novoCodigo = codFamiliaEquipamentoManager.GerarNovo("TH - ");
-                while (codFamiliaEquipamentoManager.EDuplicado(novoCodigo))
-                {
-                    novoCodigo = codFamiliaEquipamentoManager.GerarNovo("TH - ");
-                }
+                CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("TH - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("TH - ");
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }
             else if (cmbTipoEquipamento.SelectedIndex == 13)
             {
-                codFamiliaEquipamentoManager = new CodigoEquipamentos("TB - ");
-                string novoCodigo = codFamiliaEquipamentoManager.GerarNovo("TB - ");
-                while (codFamiliaEquipamentoManager.EDuplicado(novoCodigo))
-                {
-                    novoCodigo = codFamiliaEquipamentoManager.GerarNovo("TB - ");
-                }
+                CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("TB - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("TB - ");
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }

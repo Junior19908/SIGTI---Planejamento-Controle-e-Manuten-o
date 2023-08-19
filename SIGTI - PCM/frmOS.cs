@@ -19,7 +19,7 @@ namespace SIGT___PCM
         public frmOS()
         {
             InitializeComponent();
-            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerOrdemServico);
+            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerOrdemServico, ClassDadosGet.TemaUser);
         }
 
         private void button4_Click(object sender, EventArgs e)

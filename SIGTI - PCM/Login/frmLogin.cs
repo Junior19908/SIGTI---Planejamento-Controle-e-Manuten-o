@@ -21,7 +21,7 @@ namespace SIGT___PCM.Login
         {
             InitializeComponent();
             label3.Text = ProductVersion;
-            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerLogin);
+            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerLogin, ClassDadosGet.TemaUser);
         }
 
         public bool FMP = false;
