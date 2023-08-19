@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblErroTentativas = new System.Windows.Forms.Label();
+            this.lblErroChance = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
@@ -41,34 +42,36 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.metroStyleManagerLogin = new MetroFramework.Components.MetroStyleManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerLogin)).BeginInit();
             this.SuspendLayout();
             // 
-            // label6
+            // lblErroTentativas
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(180, 98);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(450, 14);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Você teve \" + attempt++ + \"de 3 tentativas, /n Feche o programa e tente novamente" +
-    ".";
-            this.label6.Visible = false;
+            this.lblErroTentativas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblErroTentativas.AutoSize = true;
+            this.lblErroTentativas.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblErroTentativas.ForeColor = System.Drawing.Color.Red;
+            this.lblErroTentativas.Location = new System.Drawing.Point(355, 99);
+            this.lblErroTentativas.Name = "lblErroTentativas";
+            this.lblErroTentativas.Size = new System.Drawing.Size(147, 14);
+            this.lblErroTentativas.TabIndex = 33;
+            this.lblErroTentativas.Text = "Você tem 1 de 5 tentativas!";
+            this.lblErroTentativas.Visible = false;
             // 
-            // label5
+            // lblErroChance
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(338, 55);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(234, 14);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "Erro você ainda tem \" + Menos + \" chances.";
-            this.label5.Visible = false;
+            this.lblErroChance.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblErroChance.AutoSize = true;
+            this.lblErroChance.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblErroChance.Location = new System.Drawing.Point(347, 56);
+            this.lblErroChance.Name = "lblErroChance";
+            this.lblErroChance.Size = new System.Drawing.Size(166, 14);
+            this.lblErroChance.TabIndex = 32;
+            this.lblErroChance.Text = "Erro você ainda tem 1 chances.";
+            this.lblErroChance.Visible = false;
             // 
             // label4
             // 
@@ -99,6 +102,7 @@
             this.btnSair.TabIndex = 29;
             this.btnSair.Text = "&Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnEntrar
             // 
@@ -143,6 +147,7 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(248, 21);
             this.txtSenha.TabIndex = 20;
+            this.txtSenha.Text = "12345678";
             this.txtSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtUser
@@ -153,6 +158,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(248, 21);
             this.txtUser.TabIndex = 19;
+            this.txtUser.Text = "usertest";
             this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox2
@@ -179,13 +185,17 @@
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
+            // metroStyleManagerLogin
+            // 
+            this.metroStyleManagerLogin.Owner = this;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(633, 222);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblErroTentativas);
+            this.Controls.Add(this.lblErroChance);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSair);
@@ -202,6 +212,7 @@
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,8 +220,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblErroTentativas;
+        private System.Windows.Forms.Label lblErroChance;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSair;
@@ -221,5 +232,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtUser;
+        private MetroFramework.Components.MetroStyleManager metroStyleManagerLogin;
     }
 }

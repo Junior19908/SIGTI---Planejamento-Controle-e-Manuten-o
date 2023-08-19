@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOS));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.txtMesAno = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.OS = new System.Windows.Forms.TabPage();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.btnImpressaoOS = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox19 = new System.Windows.Forms.TextBox();
@@ -131,6 +133,7 @@
             this.NPR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OficinaN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroStyleManagerOrdemServico = new MetroFramework.Components.MetroStyleManager(this.components);
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.OS.SuspendLayout();
@@ -146,6 +149,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerOrdemServico)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -295,6 +299,7 @@
             // 
             // OS
             // 
+            this.OS.Controls.Add(this.btnVoltar);
             this.OS.Controls.Add(this.btnImpressaoOS);
             this.OS.Controls.Add(this.button3);
             this.OS.Controls.Add(this.textBox19);
@@ -348,14 +353,25 @@
             this.OS.Text = "OS.";
             this.OS.UseVisualStyleBackColor = true;
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Tai Le", 6.75F);
+            this.btnVoltar.Location = new System.Drawing.Point(627, 444);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(67, 46);
+            this.btnVoltar.TabIndex = 54;
+            this.btnVoltar.Text = "&Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // btnImpressaoOS
             // 
             this.btnImpressaoOS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnImpressaoOS.Font = new System.Drawing.Font("Microsoft Tai Le", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImpressaoOS.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnImpressaoOS.Location = new System.Drawing.Point(736, 428);
+            this.btnImpressaoOS.Location = new System.Drawing.Point(700, 444);
             this.btnImpressaoOS.Name = "btnImpressaoOS";
-            this.btnImpressaoOS.Size = new System.Drawing.Size(104, 68);
+            this.btnImpressaoOS.Size = new System.Drawing.Size(67, 46);
             this.btnImpressaoOS.TabIndex = 55;
             this.btnImpressaoOS.Text = "&Imprimir OS";
             this.btnImpressaoOS.UseVisualStyleBackColor = true;
@@ -366,9 +382,9 @@
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button3.Location = new System.Drawing.Point(610, 428);
+            this.button3.Location = new System.Drawing.Point(773, 444);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(104, 68);
+            this.button3.Size = new System.Drawing.Size(67, 46);
             this.button3.TabIndex = 8;
             this.button3.Text = "&Cadastrar OS";
             this.button3.UseVisualStyleBackColor = true;
@@ -1159,6 +1175,10 @@
             this.Situacao.HeaderText = "Situação";
             this.Situacao.Name = "Situacao";
             // 
+            // metroStyleManagerOrdemServico
+            // 
+            this.metroStyleManagerOrdemServico.Owner = this;
+            // 
             // frmOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1168,7 +1188,6 @@
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmOS";
-            this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "SIGT - Abertura de OS";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1188,6 +1207,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerOrdemServico)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1296,5 +1316,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HrFim;
         private System.Windows.Forms.DataGridViewTextBoxColumn NrServico;
         private System.Windows.Forms.DataGridViewTextBoxColumn SituacaoFunc;
+        private System.Windows.Forms.Button btnVoltar;
+        private MetroFramework.Components.MetroStyleManager metroStyleManagerOrdemServico;
     }
 }

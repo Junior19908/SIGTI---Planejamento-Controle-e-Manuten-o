@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.userAtivo = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.temaAtivo = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +50,7 @@
             this.localizaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.centroDeCustoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.metroStyleManagerMenu = new MetroFramework.Components.MetroStyleManager(this.components);
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
@@ -54,19 +58,49 @@
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnOS = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnCadastroEquipamento = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.userAtivo,
+            this.toolStripStatusLabel3,
+            this.temaAtivo});
             this.statusStrip1.Location = new System.Drawing.Point(20, 590);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1024, 22);
             this.statusStrip1.TabIndex = 8;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(50, 17);
+            this.toolStripStatusLabel1.Text = "Usuário:";
+            // 
+            // userAtivo
+            // 
+            this.userAtivo.Name = "userAtivo";
+            this.userAtivo.Size = new System.Drawing.Size(57, 17);
+            this.userAtivo.Text = "userAtivo";
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(38, 17);
+            this.toolStripStatusLabel3.Text = "Tema:";
+            // 
+            // temaAtivo
+            // 
+            this.temaAtivo.Name = "temaAtivo";
+            this.temaAtivo.Size = new System.Drawing.Size(62, 17);
+            this.temaAtivo.Text = "temaAtivo";
             // 
             // menuStrip1
             // 
@@ -95,7 +129,7 @@
             this.funçõesToolStripMenuItem,
             this.seçãoDeEquipesToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastroToolStripMenuItem.Text = "Funcionários";
             // 
             // novoFuncionárioToolStripMenuItem
@@ -128,7 +162,7 @@
             this.localizaçãoToolStripMenuItem,
             this.funçãoToolStripMenuItem});
             this.equipamentosToolStripMenuItem.Name = "equipamentosToolStripMenuItem";
-            this.equipamentosToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.equipamentosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.equipamentosToolStripMenuItem.Text = "Equipamentos";
             // 
             // novoEquipamentoToolStripMenuItem
@@ -176,12 +210,12 @@
             // centroDeCustoToolStripMenuItem
             // 
             this.centroDeCustoToolStripMenuItem.Name = "centroDeCustoToolStripMenuItem";
-            this.centroDeCustoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.centroDeCustoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.centroDeCustoToolStripMenuItem.Text = "Centro de Custo";
             // 
-            // metroStyleManager1
+            // metroStyleManagerMenu
             // 
-            this.metroStyleManager1.Owner = this;
+            this.metroStyleManagerMenu.Owner = this;
             // 
             // flowLayoutPanel3
             // 
@@ -248,14 +282,15 @@
             this.btnOS.Click += new System.EventHandler(this.btnOS_Click);
             this.btnOS.Paint += new System.Windows.Forms.PaintEventHandler(this.btnOS_Paint);
             // 
-            // flowLayoutPanel2
+            // btnCadastroEquipamento
             // 
-            this.flowLayoutPanel2.BackgroundImage = global::SIGT___PCM.Properties.Resources.imagens_jr_page_0001_removebg_preview;
-            this.flowLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(225, 102);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(196, 232);
-            this.flowLayoutPanel2.TabIndex = 1;
+            this.btnCadastroEquipamento.BackgroundImage = global::SIGT___PCM.Properties.Resources.imagens_jr_page_0001_removebg_preview;
+            this.btnCadastroEquipamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastroEquipamento.Location = new System.Drawing.Point(225, 102);
+            this.btnCadastroEquipamento.Name = "btnCadastroEquipamento";
+            this.btnCadastroEquipamento.Size = new System.Drawing.Size(196, 232);
+            this.btnCadastroEquipamento.TabIndex = 1;
+            this.btnCadastroEquipamento.Click += new System.EventHandler(this.btnCadastroEquipamento_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -280,19 +315,20 @@
             this.Controls.Add(this.flowLayoutPanel5);
             this.Controls.Add(this.flowLayoutPanel4);
             this.Controls.Add(this.btnOS);
-            this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.btnCadastroEquipamento);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "SIGT - Planejamento Controle e Manutenção";
             this.Theme = MetroFramework.MetroThemeStyle.Light;
             this.TransparencyKey = System.Drawing.Color.Lavender;
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerMenu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,7 +337,7 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel btnCadastroEquipamento;
         private System.Windows.Forms.FlowLayoutPanel btnOS;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
@@ -324,8 +360,12 @@
         private System.Windows.Forms.ToolStripMenuItem causaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem localizaçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem funçãoToolStripMenuItem;
-        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
+        private MetroFramework.Components.MetroStyleManager metroStyleManagerMenu;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel userAtivo;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.ToolStripStatusLabel temaAtivo;
     }
 }
 

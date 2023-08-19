@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -154,8 +155,10 @@
     <Compile Include="Cadastros\CadFuncionario.Designer.cs">
       <DependentUpon>CadFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastros\ClassesCadastros\CodigoEquipamentos.cs" />
     <Compile Include="Cadastros\ClassesCadastros\Equipamento.cs" />
     <Compile Include="Conexoes\AppSetting.cs" />
+    <Compile Include="Conexoes\ClassDadosGet.cs" />
     <Compile Include="Conexoes\DatabaseConnection.cs" />
     <Compile Include="Conexoes\frmConfConexao.cs">
       <SubType>Form</SubType>
@@ -185,6 +188,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Relatorio\relatorioOS.cs" />
+    <Compile Include="Tema\TemaGeralPrograma.cs" />
     <EmbeddedResource Include="Cadastros\CadEquipamento.resx">
       <DependentUpon>CadEquipamento.cs</DependentUpon>
     </EmbeddedResource>

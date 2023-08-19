@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net.Http;
 using SIGT___PCM.Relatorio;
 using MetroFramework.Components;
+using SIGT___PCM.Tema;
 
 namespace SIGT___PCM
 {
@@ -18,12 +19,20 @@ namespace SIGT___PCM
         public frmOS()
         {
             InitializeComponent();
+            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerOrdemServico);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             relatorioOS relatorioOS = new relatorioOS();
             relatorioOS.GerarRelatorioPDF();
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Form1 menuIni = new Form1();
+            menuIni.Show();
+            this.Visible = false;
         }
     }
 }

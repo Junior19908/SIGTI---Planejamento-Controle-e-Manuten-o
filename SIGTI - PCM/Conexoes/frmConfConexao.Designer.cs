@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConfConexao));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnVisualizarSenha = new System.Windows.Forms.Button();
@@ -40,9 +42,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.metroStyleManagerConfBancoDados = new MetroFramework.Components.MetroStyleManager(this.components);
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerConfBancoDados)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -174,6 +178,10 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Modulo de Configuração do Banco de Dados";
             // 
+            // metroStyleManagerConfBancoDados
+            // 
+            this.metroStyleManagerConfBancoDados.Owner = this;
+            // 
             // frmConfConexao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,6 +189,7 @@
             this.ClientSize = new System.Drawing.Size(547, 211);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConfConexao";
             this.Text = "SIGT - Configuração do Banco de Dados";
             this.groupBox1.ResumeLayout(false);
@@ -188,6 +197,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerConfBancoDados)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,5 +216,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label17;
+        private MetroFramework.Components.MetroStyleManager metroStyleManagerConfBancoDados;
     }
 }

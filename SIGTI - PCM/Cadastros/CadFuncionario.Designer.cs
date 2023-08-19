@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -80,6 +81,7 @@
             this.SexFun = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SabFun = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Alocação = new System.Windows.Forms.TabPage();
+            this.metroStyleManagerCadastroFuncionario = new MetroFramework.Components.MetroStyleManager(this.components);
             this.tabControl1.SuspendLayout();
             this.Funcionário.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -91,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.JornadaSemanal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerCadastroFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -559,6 +562,10 @@
             this.Alocação.Text = "Alocação";
             this.Alocação.UseVisualStyleBackColor = true;
             // 
+            // metroStyleManagerCadastroFuncionario
+            // 
+            this.metroStyleManagerCadastroFuncionario.Owner = this;
+            // 
             // CadFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -567,7 +574,6 @@
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadFuncionario";
-            this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "SIGTI - Cadastro de Funcionarios";
             this.Load += new System.EventHandler(this.CadFuncionario_Load);
             this.tabControl1.ResumeLayout(false);
@@ -586,6 +592,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.JornadaSemanal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerCadastroFuncionario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -636,5 +643,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button btnVoltarMenu;
         private System.Windows.Forms.Button button1;
+        private MetroFramework.Components.MetroStyleManager metroStyleManagerCadastroFuncionario;
     }
 }

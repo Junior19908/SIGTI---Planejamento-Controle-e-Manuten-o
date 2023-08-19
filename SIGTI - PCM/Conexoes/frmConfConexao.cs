@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SIGT___PCM.Tema;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace SIGT___PCM.Conexoes
         public frmConfConexao()
         {
             InitializeComponent();
+            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerConfBancoDados);
         }
         string connectionString;
 
@@ -45,7 +47,7 @@ namespace SIGT___PCM.Conexoes
         {
             try
             {
-                connectionString = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Jet OLEDB:Database Password={1};", txtCaminho.Text, txtSenhaDB.Text);
+                connectionString = string.Format("Provider=Microsoft.ACE.OLEDB.16.0;Data Source={0};Jet OLEDB:Database Password={1};", txtCaminho.Text, txtSenhaDB.Text);
                 if (string.IsNullOrEmpty(txtCaminho.Text))
                 {
 

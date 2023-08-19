@@ -28,9 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadEquipamento));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnArquivo = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.txtChaveDeAcessoEquipamento = new System.Windows.Forms.TextBox();
+            this.cmbTipoEquipamento = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.btnImprimirFichaEquipamento = new System.Windows.Forms.Button();
             this.btnExcluirEquipamento = new System.Windows.Forms.Button();
             this.btnGravarEquipamento = new System.Windows.Forms.Button();
@@ -70,28 +76,32 @@
             this.txtDescEquipamento = new System.Windows.Forms.TextBox();
             this.txtcodEquipamento = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label16 = new System.Windows.Forms.Label();
-            this.cmbTipoEquipamento = new System.Windows.Forms.ComboBox();
-            this.txtChaveDeAcessoEquipamento = new System.Windows.Forms.TextBox();
+            this.metroStyleManagerCadastroEquipamentos = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerCadastroEquipamentos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(23, 63);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(754, 445);
+            this.tabControl1.Size = new System.Drawing.Size(782, 445);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnArquivo);
+            this.tabPage1.Controls.Add(this.btnVoltar);
             this.tabPage1.Controls.Add(this.txtChaveDeAcessoEquipamento);
             this.tabPage1.Controls.Add(this.cmbTipoEquipamento);
             this.tabPage1.Controls.Add(this.label16);
@@ -129,10 +139,73 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(746, 419);
+            this.tabPage1.Size = new System.Drawing.Size(774, 419);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Equipamento";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnArquivo
+            // 
+            this.btnArquivo.Location = new System.Drawing.Point(434, 82);
+            this.btnArquivo.Name = "btnArquivo";
+            this.btnArquivo.Size = new System.Drawing.Size(115, 25);
+            this.btnArquivo.TabIndex = 37;
+            this.btnArquivo.Text = "&Arquivo";
+            this.btnArquivo.UseVisualStyleBackColor = true;
+            this.btnArquivo.Click += new System.EventHandler(this.btnArquivo_Click);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(402, 357);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(80, 56);
+            this.btnVoltar.TabIndex = 36;
+            this.btnVoltar.Text = "&Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // txtChaveDeAcessoEquipamento
+            // 
+            this.txtChaveDeAcessoEquipamento.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtChaveDeAcessoEquipamento.Location = new System.Drawing.Point(425, 188);
+            this.txtChaveDeAcessoEquipamento.Name = "txtChaveDeAcessoEquipamento";
+            this.txtChaveDeAcessoEquipamento.Size = new System.Drawing.Size(316, 21);
+            this.txtChaveDeAcessoEquipamento.TabIndex = 35;
+            this.txtChaveDeAcessoEquipamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cmbTipoEquipamento
+            // 
+            this.cmbTipoEquipamento.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
+            this.cmbTipoEquipamento.FormattingEnabled = true;
+            this.cmbTipoEquipamento.Items.AddRange(new object[] {
+            "BOMBA CENTRIFUGA",
+            "BOMBA HELICOIDAL",
+            "BOMBAS",
+            "BOMBAS DE VÁCUO",
+            "CENTRIFUGA DE AÇÚCAR",
+            "COMPRESSOR",
+            "ELEVADOR DE CANECAS",
+            "ESTEIRAS",
+            "EXAUSTOR",
+            "MOTOR ELETRICO",
+            "PENEIRA VIBRATORIA",
+            "PLAINA LIMADORA",
+            "TRANSPORTADOR HELICOIDAL",
+            "TURBINAS"});
+            this.cmbTipoEquipamento.Location = new System.Drawing.Point(592, 32);
+            this.cmbTipoEquipamento.Name = "cmbTipoEquipamento";
+            this.cmbTipoEquipamento.Size = new System.Drawing.Size(149, 22);
+            this.cmbTipoEquipamento.TabIndex = 34;
+            this.cmbTipoEquipamento.SelectedIndexChanged += new System.EventHandler(this.cmbTipoEquipamento_SelectedIndexChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(555, 35);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(31, 13);
+            this.label16.TabIndex = 33;
+            this.label16.Text = "Tipo:";
             // 
             // btnImprimirFichaEquipamento
             // 
@@ -142,6 +215,7 @@
             this.btnImprimirFichaEquipamento.TabIndex = 32;
             this.btnImprimirFichaEquipamento.Text = "&Imprimir Ficha";
             this.btnImprimirFichaEquipamento.UseVisualStyleBackColor = true;
+            this.btnImprimirFichaEquipamento.Click += new System.EventHandler(this.btnImprimirFichaEquipamento_Click);
             // 
             // btnExcluirEquipamento
             // 
@@ -227,18 +301,17 @@
             this.rdStatusInativoEquipamento.Name = "rdStatusInativoEquipamento";
             this.rdStatusInativoEquipamento.Size = new System.Drawing.Size(61, 18);
             this.rdStatusInativoEquipamento.TabIndex = 1;
-            this.rdStatusInativoEquipamento.TabStop = true;
             this.rdStatusInativoEquipamento.Text = "Inativo";
             this.rdStatusInativoEquipamento.UseVisualStyleBackColor = true;
             // 
             // rdStatusAtivoEquipamento
             // 
             this.rdStatusAtivoEquipamento.AutoSize = true;
+            this.rdStatusAtivoEquipamento.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.rdStatusAtivoEquipamento.Location = new System.Drawing.Point(6, 20);
             this.rdStatusAtivoEquipamento.Name = "rdStatusAtivoEquipamento";
             this.rdStatusAtivoEquipamento.Size = new System.Drawing.Size(53, 18);
             this.rdStatusAtivoEquipamento.TabIndex = 0;
-            this.rdStatusAtivoEquipamento.TabStop = true;
             this.rdStatusAtivoEquipamento.Text = "Ativo";
             this.rdStatusAtivoEquipamento.UseVisualStyleBackColor = true;
             // 
@@ -338,10 +411,11 @@
             // dtGarantiaEquipamento
             // 
             this.dtGarantiaEquipamento.CustomFormat = "yyyy";
+            this.dtGarantiaEquipamento.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
             this.dtGarantiaEquipamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtGarantiaEquipamento.Location = new System.Drawing.Point(310, 162);
             this.dtGarantiaEquipamento.Name = "dtGarantiaEquipamento";
-            this.dtGarantiaEquipamento.Size = new System.Drawing.Size(108, 20);
+            this.dtGarantiaEquipamento.Size = new System.Drawing.Size(108, 21);
             this.dtGarantiaEquipamento.TabIndex = 20;
             // 
             // label8
@@ -356,10 +430,11 @@
             // dtAquisicaoEquipamento
             // 
             this.dtAquisicaoEquipamento.CustomFormat = "yyyy";
+            this.dtAquisicaoEquipamento.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
             this.dtAquisicaoEquipamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtAquisicaoEquipamento.Location = new System.Drawing.Point(124, 188);
             this.dtAquisicaoEquipamento.Name = "dtAquisicaoEquipamento";
-            this.dtAquisicaoEquipamento.Size = new System.Drawing.Size(100, 20);
+            this.dtAquisicaoEquipamento.Size = new System.Drawing.Size(100, 21);
             this.dtAquisicaoEquipamento.TabIndex = 18;
             // 
             // label7
@@ -374,10 +449,11 @@
             // dtAnoFabricacaoEquipamento
             // 
             this.dtAnoFabricacaoEquipamento.CustomFormat = "yyyy";
+            this.dtAnoFabricacaoEquipamento.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
             this.dtAnoFabricacaoEquipamento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtAnoFabricacaoEquipamento.Location = new System.Drawing.Point(124, 162);
             this.dtAnoFabricacaoEquipamento.Name = "dtAnoFabricacaoEquipamento";
-            this.dtAnoFabricacaoEquipamento.Size = new System.Drawing.Size(47, 20);
+            this.dtAnoFabricacaoEquipamento.Size = new System.Drawing.Size(47, 21);
             this.dtAnoFabricacaoEquipamento.TabIndex = 16;
             // 
             // txtModeloEquipamento
@@ -416,19 +492,22 @@
             // 
             // txtCodFamiliaEquipamento
             // 
+            this.txtCodFamiliaEquipamento.Enabled = false;
             this.txtCodFamiliaEquipamento.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtCodFamiliaEquipamento.Location = new System.Drawing.Point(124, 58);
             this.txtCodFamiliaEquipamento.Name = "txtCodFamiliaEquipamento";
             this.txtCodFamiliaEquipamento.Size = new System.Drawing.Size(100, 21);
             this.txtCodFamiliaEquipamento.TabIndex = 9;
+            this.txtCodFamiliaEquipamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtFichaEquipamento
             // 
             this.txtFichaEquipamento.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtFichaEquipamento.Location = new System.Drawing.Point(124, 84);
             this.txtFichaEquipamento.Name = "txtFichaEquipamento";
-            this.txtFichaEquipamento.Size = new System.Drawing.Size(424, 21);
+            this.txtFichaEquipamento.Size = new System.Drawing.Size(294, 21);
             this.txtFichaEquipamento.TabIndex = 8;
+            this.txtFichaEquipamento.Validating += new System.ComponentModel.CancelEventHandler(this.txtFichaEquipamento_Validating);
             // 
             // txtDescFamiliaEquipamento
             // 
@@ -478,7 +557,7 @@
             this.txtDescEquipamento.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtDescEquipamento.Location = new System.Drawing.Point(230, 6);
             this.txtDescEquipamento.Name = "txtDescEquipamento";
-            this.txtDescEquipamento.Size = new System.Drawing.Size(511, 21);
+            this.txtDescEquipamento.Size = new System.Drawing.Size(510, 21);
             this.txtDescEquipamento.TabIndex = 2;
             // 
             // txtcodEquipamento
@@ -488,6 +567,8 @@
             this.txtcodEquipamento.Name = "txtcodEquipamento";
             this.txtcodEquipamento.Size = new System.Drawing.Size(100, 21);
             this.txtcodEquipamento.TabIndex = 1;
+            this.txtcodEquipamento.Text = "5000";
+            this.txtcodEquipamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -499,67 +580,23 @@
             this.label1.Text = "Código:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // tabPage2
+            // metroStyleManagerCadastroEquipamentos
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(746, 419);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.metroStyleManagerCadastroEquipamentos.Owner = this;
             // 
-            // label16
+            // errorProvider1
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(555, 35);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 13);
-            this.label16.TabIndex = 33;
-            this.label16.Text = "Tipo:";
-            // 
-            // cmbTipoEquipamento
-            // 
-            this.cmbTipoEquipamento.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
-            this.cmbTipoEquipamento.FormattingEnabled = true;
-            this.cmbTipoEquipamento.Items.AddRange(new object[] {
-            "BOMBA CENTRIFUGA",
-            "TURBINAS",
-            "BOMBAS",
-            "BOMBAS DE VÁCUO",
-            "CENTRIFUGA DE AÇÚCAR",
-            "ELEVADOR DE CANECAS",
-            "EXAUSTOR",
-            "ESTEIRAS",
-            "PENEIRA VIBRATORIA",
-            "TRANSPORTADOR HELICOIDAL",
-            "MOTOR ELETRICO",
-            "BOMBA HELICOIDAL",
-            "COMPRESSOR",
-            "PLAINA LIMADORA"});
-            this.cmbTipoEquipamento.Location = new System.Drawing.Point(592, 32);
-            this.cmbTipoEquipamento.Name = "cmbTipoEquipamento";
-            this.cmbTipoEquipamento.Size = new System.Drawing.Size(149, 22);
-            this.cmbTipoEquipamento.TabIndex = 34;
-            // 
-            // txtChaveDeAcessoEquipamento
-            // 
-            this.txtChaveDeAcessoEquipamento.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtChaveDeAcessoEquipamento.Location = new System.Drawing.Point(425, 188);
-            this.txtChaveDeAcessoEquipamento.Name = "txtChaveDeAcessoEquipamento";
-            this.txtChaveDeAcessoEquipamento.Size = new System.Drawing.Size(316, 21);
-            this.txtChaveDeAcessoEquipamento.TabIndex = 35;
-            this.txtChaveDeAcessoEquipamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.RightToLeftChanged += new System.EventHandler(this.btnGravarEquipamento_Click);
             // 
             // CadEquipamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 531);
+            this.ClientSize = new System.Drawing.Size(828, 531);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CadEquipamento";
-            this.Style = MetroFramework.MetroColorStyle.Purple;
             this.Text = "Cadastro de Equipamentos";
             this.Theme = MetroFramework.MetroThemeStyle.Light;
             this.tabControl1.ResumeLayout(false);
@@ -569,6 +606,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerCadastroEquipamentos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -578,7 +617,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DateTimePicker dtAnoFabricacaoEquipamento;
         private System.Windows.Forms.TextBox txtModeloEquipamento;
         private System.Windows.Forms.Label label6;
@@ -620,5 +658,9 @@
         private System.Windows.Forms.ComboBox cmbTipoEquipamento;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtChaveDeAcessoEquipamento;
+        private MetroFramework.Components.MetroStyleManager metroStyleManagerCadastroEquipamentos;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnArquivo;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
