@@ -185,6 +185,10 @@
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\LoginLogar.cs" />
+    <Compile Include="Mensagem\MensagemClasse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mensagem\MensagemClasseDiag.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Relatorio\relatorioOS.cs" />
@@ -206,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensagem\MensagemClasse.resx">
+      <DependentUpon>MensagemClasse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

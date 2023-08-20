@@ -17,7 +17,7 @@ namespace SIGT___PCM.Conexoes
         public frmConfConexao()
         {
             InitializeComponent();
-            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerConfBancoDados, ClassDadosGet.TemaUser);
+            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerConfBancoDados);
         }
         string connectionString;
 

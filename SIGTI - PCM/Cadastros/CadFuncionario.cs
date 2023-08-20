@@ -16,7 +16,7 @@ namespace SIGT___PCM.Cadastros
         public CadFuncionario()
         {
             InitializeComponent();
-            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerCadastroFuncionario, ClassDadosGet.TemaUser);
+            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerCadastroFuncionario);
         }
 
         private void CadFuncionario_Load(object sender, EventArgs e)

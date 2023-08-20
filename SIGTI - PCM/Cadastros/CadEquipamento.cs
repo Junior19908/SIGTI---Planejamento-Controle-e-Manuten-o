@@ -1,17 +1,13 @@
 ﻿using SIGT___PCM.Cadastros.ClassesCadastros;
 using SIGT___PCM.Conexoes;
+using SIGT___PCM.Mensagem;
 using SIGT___PCM.Tema;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Data.OleDb;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SIGT___PCM.Cadastros
@@ -21,7 +17,9 @@ namespace SIGT___PCM.Cadastros
         public CadEquipamento()
         {
             InitializeComponent();
-            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerCadastroEquipamentos, ClassDadosGet.TemaUser);
+            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerCadastroEquipamentos);
+            Equipamento equipamento = new Equipamento();
+            txtcodEquipamento.Text = equipamento.GerarNovoCodigoEqu("EQ - ");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -92,6 +90,9 @@ namespace SIGT___PCM.Cadastros
                     case "COMPRESSOR":
                         cmbDescTipo = 12;
                         break;
+                    case "TURBINA DE VAPOR":
+                        cmbDescTipo = 14;
+                        break;
                     case "PLAINA LIMADORA":
                         cmbDescTipo = 13;
                         break;
@@ -99,11 +100,15 @@ namespace SIGT___PCM.Cadastros
                         cmbDescTipo = 0; // Valor padrão caso o tipo não seja reconhecido
                         break;
                 }
-
-                Equipamento equipamento = new Equipamento();
-                equipamento.CadastroEquipamento(Convert.ToInt32(txtcodEquipamento.Text), txtDescEquipamento.Text, txtFuncaoEquipamento.Text, txtCodFamiliaEquipamento.Text, txtDescFamiliaEquipamento.Text, txtFichaEquipamento.Text, txtFabricanteEquipamento.Text, txtModeloEquipamento.Text, txtNserieEquipamentos.Text, this.dtAnoFabricacaoEquipamento.Value, this.dtGarantiaEquipamento.Value, this.dtAquisicaoEquipamento.Value, rcComplementoEquipamento.Text, txtLocalizacaoEquipamento.Text, statusOperacao, this.dtStatusInicioEquipamento.Value, this.dtStatusFimEquipamento.Value, cmbDescTipo, cmbTipoEquipamento.Text, txtNumNotaFiscalEquipamento.Text, txtChaveDeAcessoEquipamento.Text, ClassDadosGet.IDUsuario, DateTime.Now);
-
+                {
+                    Equipamento equipamento = new Equipamento();
+                    equipamento.CadastroEquipamento(txtcodEquipamento.Text, txtDescEquipamento.Text, txtFuncaoEquipamento.Text, txtCodFamiliaEquipamento.Text, txtDescFamiliaEquipamento.Text, txtFichaEquipamento.Text, txtFabricanteEquipamento.Text, txtModeloEquipamento.Text, txtNserieEquipamentos.Text, this.dtAnoFabricacaoEquipamento.Value, this.dtGarantiaEquipamento.Value, this.dtAquisicaoEquipamento.Value, rcComplementoEquipamento.Text, txtLocalizacaoEquipamento.Text, statusOperacao, this.dtStatusInicioEquipamento.Value, this.dtStatusFimEquipamento.Value, cmbDescTipo, cmbTipoEquipamento.Text, txtNumNotaFiscalEquipamento.Text, txtChaveDeAcessoEquipamento.Text, ClassDadosGet.IDUsuario, DateTime.Now);
+                }
                 LimparBox();
+                {
+                    Equipamento codEquipamento = new Equipamento();
+                    txtcodEquipamento.Text = codEquipamento.GerarNovoCodigoEqu("EQ - ");
+                }
             }
         }
         private void LimparBox()
@@ -254,6 +259,13 @@ namespace SIGT___PCM.Cadastros
                 txtCodFamiliaEquipamento.Text = novoCodigo;
                 txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
             }
+            else if (cmbTipoEquipamento.SelectedIndex == 14)
+            {
+                CodigoEquipamentos codFamiliaEquipamentoManager = new CodigoEquipamentos("TV - ");
+                novoCodigo = codFamiliaEquipamentoManager.GerarNovo("TV - ");
+                txtCodFamiliaEquipamento.Text = novoCodigo;
+                txtDescFamiliaEquipamento.Text = cmbTipoEquipamento.Text;
+            }
         }
 
         private void btnImprimirFichaEquipamento_Click(object sender, EventArgs e)
@@ -268,8 +280,12 @@ namespace SIGT___PCM.Cadastros
                 File.WriteAllBytes(caminhoDoArquivo, arquivoBytes);
                 Process.Start(caminhoDoArquivo);
             }
+            else
+            {
+                MensagemClasseDiag mensagem = new MensagemClasseDiag();
+                mensagem.MostrarMensagemPersonalizadaErroAusente(txtcodEquipamento.Text);
+            }
         }
-
         private void txtFichaEquipamento_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtFichaEquipamento.Text))

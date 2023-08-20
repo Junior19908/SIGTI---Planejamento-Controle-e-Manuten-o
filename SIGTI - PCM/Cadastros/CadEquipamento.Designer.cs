@@ -191,7 +191,8 @@
             "PENEIRA VIBRATORIA",
             "PLAINA LIMADORA",
             "TRANSPORTADOR HELICOIDAL",
-            "TURBINAS"});
+            "TURBINAS",
+            "TURBINA DE VAPOR"});
             this.cmbTipoEquipamento.Location = new System.Drawing.Point(592, 32);
             this.cmbTipoEquipamento.Name = "cmbTipoEquipamento";
             this.cmbTipoEquipamento.Size = new System.Drawing.Size(149, 22);
@@ -567,7 +568,6 @@
             this.txtcodEquipamento.Name = "txtcodEquipamento";
             this.txtcodEquipamento.Size = new System.Drawing.Size(100, 21);
             this.txtcodEquipamento.TabIndex = 1;
-            this.txtcodEquipamento.Text = "5000";
             this.txtcodEquipamento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1

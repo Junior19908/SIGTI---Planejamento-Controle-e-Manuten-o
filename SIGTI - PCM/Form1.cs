@@ -19,7 +19,7 @@ namespace SIGT___PCM
         public Form1()
         {
             InitializeComponent();
-            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerMenu, ClassDadosGet.TemaUser);
+            TemaGeralPrograma.SetPurpleStyle(metroStyleManagerMenu);
             temaAtivo.Text = ClassDadosGet.Tema;
             userAtivo.Text = ClassDadosGet.Usuario;
             if(temaAtivo.Text == "Vermelho")

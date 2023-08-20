@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.WebRequestMethods;
-
+using MetroFramework;
 namespace SIGT___PCM.Login
 {
     internal class LoginLogar
@@ -35,7 +35,16 @@ namespace SIGT___PCM.Login
                             ClassDadosGet.Status = Convert.ToInt32(oleDbDataReader["col_status"]);
                             ClassDadosGet.Nivel = Convert.ToInt32(oleDbDataReader["col_nivel"]);
                             ClassDadosGet.IDUsuario = Convert.ToInt32(oleDbDataReader["col_id"]);
-                     }
+                            string temaString = oleDbDataReader["col_userTema"].ToString();
+                            if (Enum.TryParse(temaString, out MetroColorStyle tema))
+                            {
+                                ClassDadosGet.TemaUser = tema;
+                            }
+                            else
+                            {
+                                ClassDadosGet.TemaUser = MetroColorStyle.Default;
+                            }
+                    }
                 }
             }
             catch (Exception ex)

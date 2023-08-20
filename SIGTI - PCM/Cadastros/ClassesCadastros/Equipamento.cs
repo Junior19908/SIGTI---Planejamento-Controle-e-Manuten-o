@@ -1,23 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.OleDb;
 using SIGT___PCM.Conexoes;
 using System.Windows.Forms;
 using System.IO;
+using SIGT___PCM.Mensagem;
 
 namespace SIGT___PCM.Cadastros.ClassesCadastros
 {
     internal class Equipamento
     {
-        public void CadastroEquipamento(Int32 codEquipamento, string descricaoEquipamento, string funcaoEquipamento, string codFamiliaEquipamento, string familiaDescEquipamento, string fichaEquipamento, string fabricanteEquipamento, string modeloEquipamento, string nSerieEquipamento, DateTime anoFabricacaoEquipamento, DateTime dataGarantiaEquipamento, DateTime dataAquisicaoEquipamento, string complementoEquipamento, string localizacaoEquipamento, bool statusEquipamento, DateTime dataInicioStatusEquipamento, DateTime dataFimStatusEquipamento, Int32 codTipoEquipamento, string descTipoEquipamento, string notaFiscalEquipamento, string chaveAcessoNotaFiscalEquipamento, Int32 usuarioCadastroEquipamento, DateTime dataCadatroUsuarioEquipamento) 
+        private string ultimoCodGerado;
+        string generarNumero;
+        public void CadastroEquipamento(string codEquipamento, string descricaoEquipamento, string funcaoEquipamento, string codFamiliaEquipamento, string familiaDescEquipamento, string fichaEquipamento, string fabricanteEquipamento, string modeloEquipamento, string nSerieEquipamento, DateTime anoFabricacaoEquipamento, DateTime dataGarantiaEquipamento, DateTime dataAquisicaoEquipamento, string complementoEquipamento, string localizacaoEquipamento, bool statusEquipamento, DateTime dataInicioStatusEquipamento, DateTime dataFimStatusEquipamento, Int32 codTipoEquipamento, string descTipoEquipamento, string notaFiscalEquipamento, string chaveAcessoNotaFiscalEquipamento, Int32 usuarioCadastroEquipamento, DateTime dataCadatroUsuarioEquipamento) 
         {
             OleDbCommand oleDbCommand = new OleDbCommand("INSERT INTO TB_CadastroEquipamentosDB_SIGT (col_codEquipamento, col_descricaoEquipamento, col_funcaoEquipamento, col_codFamiliaEquipamento, col_familiaDescEquipamento, col_fabricanteEquipamento, col_modeloEquipamento, col_nSerieEquipamento, col_anoFabricacaoEquipamento, col_dataGarantiaEquipamento, col_dataAquisicaoEquipamento, col_complementoEquipamento, col_localizacaoEquipamento, col_statusEquipamento, col_dataInicioStatusEquipamento, col_dataFimStatusEquipamento, col_codTipoEquipamento, col_descTipoEquipamento, col_notaFiscalEquipamento, col_chaveAcessoNotaFiscalEquipamento, col_usuarioCadastroEquipamento, col_dataCadatroUsuarioEquipamento, col_fichaEquipamentoNome, col_fichaEquipamento)" +
                 "VALUES" +
                 "(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", DatabaseConnection.DB_SIGT());
-            oleDbCommand.Parameters.Add("col_codEquipamento", OleDbType.Integer).Value = codEquipamento;
+            oleDbCommand.Parameters.Add("col_codEquipamento", OleDbType.BSTR).Value = codEquipamento;
             oleDbCommand.Parameters.Add("col_descricaoEquipamento", OleDbType.BSTR).Value = descricaoEquipamento;
             oleDbCommand.Parameters.Add("col_funcaoEquipamento", OleDbType.BSTR).Value = funcaoEquipamento;
             oleDbCommand.Parameters.Add("col_codFamiliaEquipamento", OleDbType.VarChar).Value = codFamiliaEquipamento;
@@ -52,12 +51,36 @@ namespace SIGT___PCM.Cadastros.ClassesCadastros
             int rowsAffected = oleDbCommand.ExecuteNonQuery();
             if (rowsAffected > 0)
             {
-                MessageBox.Show("Equipamento inserido com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MensagemClasseDiag mensagem = new MensagemClasseDiag();
+                mensagem.MostrarMensagemPersonalizadaInseridaCorretamente(codEquipamento);
             }
             else
             {
                 MessageBox.Show("A inserção falhou. Verifique os dados e tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+        public string GerarNovoCodigoEqu(string codN)
+        {
+            try
+            {
+                OleDbCommand oleDbCommand = new OleDbCommand("SELECT TOP 1 col_codEquipamento FROM TB_CadastroEquipamentosDB_SIGT WHERE col_codEquipamento LIKE ? ORDER BY col_codEquipamento DESC", DatabaseConnection.DB_SIGT());
+                string padrao = "%" + codN + "%";
+                oleDbCommand.Parameters.Add("col_codEquipamento", OleDbType.BSTR).Value = padrao;
+                OleDbDataReader oleDbDataReader = oleDbCommand.ExecuteReader();
+                if (oleDbDataReader.HasRows)
+                {
+                    oleDbDataReader.Read();
+                    ultimoCodGerado = oleDbDataReader.GetString(0);
+                }
+            }
+            catch (Exception eRr)
+            {
+                MessageBox.Show($"Erro: {eRr.Message}");
+            }
+            decimal soma1 = Convert.ToDecimal(ultimoCodGerado.Replace("EQ - ",""));
+            decimal soma2 = soma1 + 1;
+            generarNumero = $"EQ - {soma2.ToString().PadLeft(6, '0')}";
+            return generarNumero;
         }
     }
 }
