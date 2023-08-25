@@ -157,6 +157,7 @@
     </Compile>
     <Compile Include="Cadastros\ClassesCadastros\CodigoEquipamentos.cs" />
     <Compile Include="Cadastros\ClassesCadastros\Equipamento.cs" />
+    <Compile Include="Cadastros\ClassesCadastros\Funcionario.cs" />
     <Compile Include="Conexoes\AppSetting.cs" />
     <Compile Include="Conexoes\ClassDadosGet.cs" />
     <Compile Include="Conexoes\DatabaseConnection.cs" />

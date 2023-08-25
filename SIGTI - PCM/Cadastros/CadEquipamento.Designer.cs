@@ -220,6 +220,7 @@
             // 
             // btnExcluirEquipamento
             // 
+            this.btnExcluirEquipamento.Enabled = false;
             this.btnExcluirEquipamento.Location = new System.Drawing.Point(574, 357);
             this.btnExcluirEquipamento.Name = "btnExcluirEquipamento";
             this.btnExcluirEquipamento.Size = new System.Drawing.Size(80, 56);

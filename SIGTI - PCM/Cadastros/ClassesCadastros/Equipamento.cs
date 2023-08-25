@@ -48,15 +48,17 @@ namespace SIGT___PCM.Cadastros.ClassesCadastros
                 byte[] arquivosByte = File.ReadAllBytes(fichaEquipamento);
                 oleDbCommand.Parameters.Add("col_fichaEquipamento", OleDbType.VarBinary).Value = arquivosByte;
             }
-            int rowsAffected = oleDbCommand.ExecuteNonQuery();
-            if (rowsAffected > 0)
+            try
+            {
+                int rowsAffected = oleDbCommand.ExecuteNonQuery();
+
+                MensagemClasseDiag mensagem = new MensagemClasseDiag();
+                mensagem.MostrarMensagemPersonalizadaInseridaCorretamente(codEquipamento,"Equipamento");
+            }
+            catch
             {
                 MensagemClasseDiag mensagem = new MensagemClasseDiag();
-                mensagem.MostrarMensagemPersonalizadaInseridaCorretamente(codEquipamento);
-            }
-            else
-            {
-                MessageBox.Show("A inserção falhou. Verifique os dados e tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                mensagem.MostrarMensagemPersonalizadaInseridaErro("Equipamento");
             }
         }
         public string GerarNovoCodigoEqu(string codN)
