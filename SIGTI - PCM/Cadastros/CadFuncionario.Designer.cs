@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadFuncionario));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Funcionário = new System.Windows.Forms.TabPage();
@@ -609,6 +610,8 @@
             // 
             // dataGridViewSemanaFuncionario
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewSemanaFuncionario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewSemanaFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSemanaFuncionario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Dom,
@@ -623,6 +626,7 @@
             this.dataGridViewSemanaFuncionario.Name = "dataGridViewSemanaFuncionario";
             this.dataGridViewSemanaFuncionario.Size = new System.Drawing.Size(427, 344);
             this.dataGridViewSemanaFuncionario.TabIndex = 0;
+            this.dataGridViewSemanaFuncionario.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSemanaFuncionario_CellValueChanged);
             // 
             // Dom
             // 
