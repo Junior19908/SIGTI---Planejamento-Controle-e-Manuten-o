@@ -82,6 +82,7 @@
             // 
             // btnVisualizarSenha
             // 
+            this.btnVisualizarSenha.Enabled = false;
             this.btnVisualizarSenha.Location = new System.Drawing.Point(163, 52);
             this.btnVisualizarSenha.Name = "btnVisualizarSenha";
             this.btnVisualizarSenha.Size = new System.Drawing.Size(64, 20);
@@ -127,7 +128,7 @@
             this.txtSenhaDB.PasswordChar = '*';
             this.txtSenhaDB.Size = new System.Drawing.Size(86, 20);
             this.txtSenhaDB.TabIndex = 3;
-            this.txtSenhaDB.Text = "DBSCV1234";
+            this.txtSenhaDB.Text = "DBSPCM1234";
             // 
             // label1
             // 

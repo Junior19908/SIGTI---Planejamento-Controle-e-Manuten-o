@@ -148,4 +148,10 @@
   <data name="SIGT_LOGO_ICO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SIGT_LOGO_ICO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="document" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SIGT_LOGO_ICO1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SIGT_LOGO_ICO.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

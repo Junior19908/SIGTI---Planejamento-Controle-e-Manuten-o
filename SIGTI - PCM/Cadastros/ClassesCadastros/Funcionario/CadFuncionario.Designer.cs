@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadFuncionario));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Funcionário = new System.Windows.Forms.TabPage();
@@ -37,7 +36,7 @@
             this.btnGravar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbFuncao = new System.Windows.Forms.ComboBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.rdDesativadoFuncionario = new System.Windows.Forms.RadioButton();
             this.rdAtivoFuncionario = new System.Windows.Forms.RadioButton();
@@ -68,20 +67,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMatriculaFuncionario = new System.Windows.Forms.TextBox();
             this.txtNomeCompletoFuncionario = new System.Windows.Forms.TextBox();
-            this.DadosComplementares = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JornadaSemanal = new System.Windows.Forms.TabPage();
-            this.dataGridViewSemanaFuncionario = new System.Windows.Forms.DataGridView();
-            this.Dom = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.SegFun = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.TerFun = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QuaFun = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.QuiFun = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.SexFun = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.SabFun = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.chDomingo = new System.Windows.Forms.CheckBox();
+            this.chSabado = new System.Windows.Forms.CheckBox();
+            this.chSegunda = new System.Windows.Forms.CheckBox();
+            this.chSexta = new System.Windows.Forms.CheckBox();
+            this.chTerca = new System.Windows.Forms.CheckBox();
+            this.chQuinta = new System.Windows.Forms.CheckBox();
+            this.chQuarta = new System.Windows.Forms.CheckBox();
             this.metroStyleManagerCadastroFuncionario = new MetroFramework.Components.MetroStyleManager(this.components);
             this.tabControl1.SuspendLayout();
             this.Funcionário.SuspendLayout();
@@ -91,17 +85,14 @@
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.DadosComplementares.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.JornadaSemanal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSemanaFuncionario)).BeginInit();
+            this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerCadastroFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.Funcionário);
-            this.tabControl1.Controls.Add(this.DadosComplementares);
             this.tabControl1.Controls.Add(this.JornadaSemanal);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(20, 60);
@@ -122,6 +113,7 @@
             this.Funcionário.TabIndex = 0;
             this.Funcionário.Text = "Funcionário";
             this.Funcionário.UseVisualStyleBackColor = true;
+            this.Funcionário.Click += new System.EventHandler(this.Funcionário_Click);
             // 
             // btnVoltarMenu
             // 
@@ -146,7 +138,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmbFuncao);
             this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.btnArquivo);
             this.groupBox1.Controls.Add(this.txtCaminhoArquivoFuncionario);
@@ -183,41 +175,39 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Desc. Função:";
             // 
-            // comboBox1
+            // cmbFuncao
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbFuncao.FormattingEnabled = true;
+            this.cmbFuncao.Items.AddRange(new object[] {
             "AJ SERRALHEIRO",
             "AJ SOLDADOR",
-            "AJ. SERRALHEIRO",
-            "AJ.CALDEIREIRO",
-            "AJ.ELETRISTA",
-            "AJ.SOLDADOR",
-            "AJ.TORNEIRO",
+            "AJ CALDEIREIRO",
+            "AJ ELETRICISTA",
             "CALDEIREIRO",
             "CASA DE FORÇA",
             "ELETRICISTA",
-            "ENC TURBINA AÇUCAR",
-            "ENC. MOENDA",
-            "ENC. TURBINA VAPOR",
-            "ENCARREGADO CALDEIRARIA",
-            "ENCARREGADO INSTRUMENTAÇÃO",
-            "ENCARREGADO LUBRIFICAÇÃO",
-            "ENCARREGADO OFICINA",
+            "ENC TURBINA AÇÚCAR",
+            "ENC MOENDA",
+            "ENC TURBINA VAPOR",
+            "ENC CALDEIRARIA",
+            "ENC INSTRUMENTAÇÃO",
+            "ENC LUBRIFICAÇÃO",
+            "ENC OFICINA",
             "INSTRUMENTISTA",
-            "OP. PONTE ROLANTE",
-            "OP.QUADRO",
-            "OP.QUADRO (CASA FORÇA1)",
-            "OP.TURBO GERADOR",
+            "OP PONTE ROLANTE",
+            "OP QUADRO",
+            "OP QUADRO (CASA FORÇA1)",
+            "OP TURBO GERADOR",
             "SERRALHEIRO",
             "SERRALHEIRO (MOTOR)",
             "SERVENTE",
             "SOLDADOR",
             "TORNEIRO"});
-            this.comboBox1.Location = new System.Drawing.Point(268, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 20;
+            this.cmbFuncao.Location = new System.Drawing.Point(268, 13);
+            this.cmbFuncao.Name = "cmbFuncao";
+            this.cmbFuncao.Size = new System.Drawing.Size(121, 21);
+            this.cmbFuncao.TabIndex = 20;
+            this.cmbFuncao.SelectedIndexChanged += new System.EventHandler(this.cmbFuncao_SelectedIndexChanged);
             // 
             // groupBox6
             // 
@@ -521,7 +511,6 @@
             this.txtCodigoFuncaoFuncionario.Name = "txtCodigoFuncaoFuncionario";
             this.txtCodigoFuncaoFuncionario.Size = new System.Drawing.Size(100, 18);
             this.txtCodigoFuncaoFuncionario.TabIndex = 4;
-            this.txtCodigoFuncaoFuncionario.Text = "SIGT-AJSER - 000001";
             // 
             // label1
             // 
@@ -547,7 +536,6 @@
             this.txtMatriculaFuncionario.Name = "txtMatriculaFuncionario";
             this.txtMatriculaFuncionario.Size = new System.Drawing.Size(85, 20);
             this.txtMatriculaFuncionario.TabIndex = 0;
-            this.txtMatriculaFuncionario.Text = "50108896";
             // 
             // txtNomeCompletoFuncionario
             // 
@@ -555,134 +543,102 @@
             this.txtNomeCompletoFuncionario.Name = "txtNomeCompletoFuncionario";
             this.txtNomeCompletoFuncionario.Size = new System.Drawing.Size(293, 20);
             this.txtNomeCompletoFuncionario.TabIndex = 2;
-            this.txtNomeCompletoFuncionario.Text = "Carlos José de Souza Brito Júnior";
-            // 
-            // DadosComplementares
-            // 
-            this.DadosComplementares.Controls.Add(this.dataGridView2);
-            this.DadosComplementares.Location = new System.Drawing.Point(4, 22);
-            this.DadosComplementares.Name = "DadosComplementares";
-            this.DadosComplementares.Padding = new System.Windows.Forms.Padding(3);
-            this.DadosComplementares.Size = new System.Drawing.Size(427, 344);
-            this.DadosComplementares.TabIndex = 1;
-            this.DadosComplementares.Text = "Dados Complementares";
-            this.DadosComplementares.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(421, 338);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 60;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Matricula";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Arquivo";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 200;
             // 
             // JornadaSemanal
             // 
-            this.JornadaSemanal.Controls.Add(this.dataGridViewSemanaFuncionario);
+            this.JornadaSemanal.Controls.Add(this.groupBox7);
             this.JornadaSemanal.Location = new System.Drawing.Point(4, 22);
             this.JornadaSemanal.Name = "JornadaSemanal";
             this.JornadaSemanal.Size = new System.Drawing.Size(427, 344);
             this.JornadaSemanal.TabIndex = 2;
-            this.JornadaSemanal.Text = "Jornada Semanal Padrão";
+            this.JornadaSemanal.Text = "Jornada Semanal";
             this.JornadaSemanal.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewSemanaFuncionario
+            // groupBox7
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewSemanaFuncionario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewSemanaFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSemanaFuncionario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Dom,
-            this.SegFun,
-            this.TerFun,
-            this.QuaFun,
-            this.QuiFun,
-            this.SexFun,
-            this.SabFun});
-            this.dataGridViewSemanaFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewSemanaFuncionario.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewSemanaFuncionario.Name = "dataGridViewSemanaFuncionario";
-            this.dataGridViewSemanaFuncionario.Size = new System.Drawing.Size(427, 344);
-            this.dataGridViewSemanaFuncionario.TabIndex = 0;
-            this.dataGridViewSemanaFuncionario.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSemanaFuncionario_CellValueChanged);
+            this.groupBox7.Controls.Add(this.chDomingo);
+            this.groupBox7.Controls.Add(this.chSabado);
+            this.groupBox7.Controls.Add(this.chSegunda);
+            this.groupBox7.Controls.Add(this.chSexta);
+            this.groupBox7.Controls.Add(this.chTerca);
+            this.groupBox7.Controls.Add(this.chQuinta);
+            this.groupBox7.Controls.Add(this.chQuarta);
+            this.groupBox7.Location = new System.Drawing.Point(3, 3);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(421, 55);
+            this.groupBox7.TabIndex = 7;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Semana";
             // 
-            // Dom
+            // chDomingo
             // 
-            this.Dom.HeaderText = "Dom";
-            this.Dom.Name = "Dom";
-            this.Dom.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dom.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Dom.Width = 40;
+            this.chDomingo.AutoSize = true;
+            this.chDomingo.Location = new System.Drawing.Point(41, 19);
+            this.chDomingo.Name = "chDomingo";
+            this.chDomingo.Size = new System.Drawing.Size(48, 17);
+            this.chDomingo.TabIndex = 0;
+            this.chDomingo.Text = "Dom";
+            this.chDomingo.UseVisualStyleBackColor = true;
             // 
-            // SegFun
+            // chSabado
             // 
-            this.SegFun.HeaderText = "Seg";
-            this.SegFun.Name = "SegFun";
-            this.SegFun.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.SegFun.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.SegFun.Width = 40;
+            this.chSabado.AutoSize = true;
+            this.chSabado.Location = new System.Drawing.Point(339, 19);
+            this.chSabado.Name = "chSabado";
+            this.chSabado.Size = new System.Drawing.Size(45, 17);
+            this.chSabado.TabIndex = 6;
+            this.chSabado.Text = "Sáb";
+            this.chSabado.UseVisualStyleBackColor = true;
             // 
-            // TerFun
+            // chSegunda
             // 
-            this.TerFun.HeaderText = "Ter";
-            this.TerFun.Name = "TerFun";
-            this.TerFun.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TerFun.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.TerFun.Width = 40;
+            this.chSegunda.AutoSize = true;
+            this.chSegunda.Location = new System.Drawing.Point(95, 19);
+            this.chSegunda.Name = "chSegunda";
+            this.chSegunda.Size = new System.Drawing.Size(45, 17);
+            this.chSegunda.TabIndex = 1;
+            this.chSegunda.Text = "Seg";
+            this.chSegunda.UseVisualStyleBackColor = true;
             // 
-            // QuaFun
+            // chSexta
             // 
-            this.QuaFun.HeaderText = "Qua";
-            this.QuaFun.Name = "QuaFun";
-            this.QuaFun.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.QuaFun.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.QuaFun.Width = 40;
+            this.chSexta.AutoSize = true;
+            this.chSexta.Location = new System.Drawing.Point(289, 19);
+            this.chSexta.Name = "chSexta";
+            this.chSexta.Size = new System.Drawing.Size(44, 17);
+            this.chSexta.TabIndex = 5;
+            this.chSexta.Text = "Sex";
+            this.chSexta.UseVisualStyleBackColor = true;
             // 
-            // QuiFun
+            // chTerca
             // 
-            this.QuiFun.HeaderText = "Qui";
-            this.QuiFun.Name = "QuiFun";
-            this.QuiFun.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.QuiFun.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.QuiFun.Width = 40;
+            this.chTerca.AutoSize = true;
+            this.chTerca.Location = new System.Drawing.Point(146, 19);
+            this.chTerca.Name = "chTerca";
+            this.chTerca.Size = new System.Drawing.Size(42, 17);
+            this.chTerca.TabIndex = 2;
+            this.chTerca.Text = "Ter";
+            this.chTerca.UseVisualStyleBackColor = true;
             // 
-            // SexFun
+            // chQuinta
             // 
-            this.SexFun.HeaderText = "Sex";
-            this.SexFun.Name = "SexFun";
-            this.SexFun.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.SexFun.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.SexFun.Width = 40;
+            this.chQuinta.AutoSize = true;
+            this.chQuinta.Location = new System.Drawing.Point(241, 19);
+            this.chQuinta.Name = "chQuinta";
+            this.chQuinta.Size = new System.Drawing.Size(42, 17);
+            this.chQuinta.TabIndex = 4;
+            this.chQuinta.Text = "Qui";
+            this.chQuinta.UseVisualStyleBackColor = true;
             // 
-            // SabFun
+            // chQuarta
             // 
-            this.SabFun.HeaderText = "Sab";
-            this.SabFun.Name = "SabFun";
-            this.SabFun.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.SabFun.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.SabFun.Width = 40;
+            this.chQuarta.AutoSize = true;
+            this.chQuarta.Location = new System.Drawing.Point(189, 19);
+            this.chQuarta.Name = "chQuarta";
+            this.chQuarta.Size = new System.Drawing.Size(46, 17);
+            this.chQuarta.TabIndex = 3;
+            this.chQuarta.Text = "Qua";
+            this.chQuarta.UseVisualStyleBackColor = true;
             // 
             // metroStyleManagerCadastroFuncionario
             // 
@@ -712,10 +668,9 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.DadosComplementares.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.JornadaSemanal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSemanaFuncionario)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManagerCadastroFuncionario)).EndInit();
             this.ResumeLayout(false);
 
@@ -725,7 +680,6 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Funcionário;
-        private System.Windows.Forms.TabPage DadosComplementares;
         private System.Windows.Forms.TabPage JornadaSemanal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNomeCompletoFuncionario;
@@ -752,21 +706,9 @@
         private System.Windows.Forms.RadioButton rdAtividadeManutencao;
         private System.Windows.Forms.RadioButton rdCategoriaHoristaFuncionario;
         private System.Windows.Forms.RadioButton rdCategoriaMensalistaFuncionario;
-        private System.Windows.Forms.DataGridView dataGridViewSemanaFuncionario;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button btnVoltarMenu;
         private System.Windows.Forms.Button btnGravar;
         private MetroFramework.Components.MetroStyleManager metroStyleManagerCadastroFuncionario;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Dom;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn SegFun;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn TerFun;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn QuaFun;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn QuiFun;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn SexFun;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn SabFun;
         private System.Windows.Forms.Button btnArquivo;
         private System.Windows.Forms.TextBox txtCaminhoArquivoFuncionario;
         private System.Windows.Forms.Label label7;
@@ -774,6 +716,14 @@
         private System.Windows.Forms.RadioButton rdDesativadoFuncionario;
         private System.Windows.Forms.RadioButton rdAtivoFuncionario;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbFuncao;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.CheckBox chDomingo;
+        private System.Windows.Forms.CheckBox chSabado;
+        private System.Windows.Forms.CheckBox chSegunda;
+        private System.Windows.Forms.CheckBox chSexta;
+        private System.Windows.Forms.CheckBox chTerca;
+        private System.Windows.Forms.CheckBox chQuinta;
+        private System.Windows.Forms.CheckBox chQuarta;
     }
 }

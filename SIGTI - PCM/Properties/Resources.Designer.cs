@@ -83,6 +83,16 @@ namespace SIGT___PCM.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap document {
+            get {
+                object obj = ResourceManager.GetObject("document", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iamgen2_page_0001_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("iamgen2_page-0001-removebg-preview", resourceCulture);
@@ -128,6 +138,16 @@ namespace SIGT___PCM.Properties {
             get {
                 object obj = ResourceManager.GetObject("SIGT_LOGO_ICO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
+        /// </summary>
+        internal static System.Drawing.Icon SIGT_LOGO_ICO1 {
+            get {
+                object obj = ResourceManager.GetObject("SIGT_LOGO_ICO1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
