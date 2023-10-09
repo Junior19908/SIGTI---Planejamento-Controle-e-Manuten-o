@@ -2291,7 +2291,7 @@
       </ReportItems>
       <Style>
         <Border>
-          <Style>Solid</Style>
+          <Style>None</Style>
         </Border>
       </Style>
     </PageHeader>
