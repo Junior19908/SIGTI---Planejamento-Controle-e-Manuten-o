@@ -19,13 +19,17 @@ namespace SIGT___PCM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            frmLogin frmLogin = new frmLogin();
-            frmLogin.ShowDialog();
 
-            if (frmLogin.FMP == true)
-            {
-                Application.Run(new Form1());
-            }
+            Relatorio.OS oS = new Relatorio.OS();
+            oS.ShowDialog();
+
+            //frmLogin frmLogin = new frmLogin();
+            //frmLogin.ShowDialog();
+            //
+            //if (frmLogin.FMP == true)
+            //{
+            //    Application.Run(new Form1());
+            //}
         }
     }
 }
